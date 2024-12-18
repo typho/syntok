@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<syntok xmlns="https://spec.typho.org/syntok/1.0/xml-schema"
+  ><item category="preproc_include" start="0" end="8">#include </item>
+  <item category="system_lib_string" start="9" end="18">&lt;iostream&gt;</item>
+  <item category="function_definition" start="19" end="20">
+
+</item>
+  <item category="primitive_type" start="21" end="23">int</item>
+  <item category="function_declarator" start="24" end="24"> </item>
+  <item category="identifier" start="25" end="28">main</item>
+  <item category="parameter_list" start="29" end="30">()</item>
+  <item category="qualified_identifier" start="31" end="34"> {
+        </item>
+  <item category="namespace_identifier" start="35" end="37">std</item>
+  <item category="qualified_identifier" start="38" end="39">::</item>
+  <item category="identifier" start="40" end="43">cout</item>
+  <item category="string_literal" start="44" end="48"> &lt;&lt; "</item>
+  <item category="string_content" start="49" end="54">hello </item>
+  <item category="lambda_expression" start="55" end="60">" &lt;&lt; (</item>
+  <item category="lambda_capture_specifier" start="61" end="62">[]</item>
+  <item category="parameter_declaration" start="63" end="63">(</item>
+  <item category="primitive_type" start="64" end="67">void</item>
+  <item category="string_literal" start="68" end="78">){ return "</item>
+  <item category="string_content" start="79" end="84">world!</item>
+  <item category="return_statement" start="85" end="86">";</item>
+  <item category="compound_statement" start="87" end="88"> }</item>
+  <item category="call_expression" start="89" end="89">)</item>
+  <item category="argument_list" start="90" end="91">()</item>
+  <item category="qualified_identifier" start="92" end="95"> &lt;&lt; </item>
+  <item category="namespace_identifier" start="96" end="98">std</item>
+  <item category="qualified_identifier" start="99" end="100">::</item>
+  <item category="identifier" start="101" end="104">endl</item>
+  <item category="return_statement" start="105" end="114">;
+        return </item>
+  <item category="return_statement" start="115" end="116">0;</item>
+  <item category="compound_statement" start="117" end="118">
+}</item>
+</syntok>

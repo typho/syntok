@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<translation_unit srow="0" scol="0" erow="6" ecol="0">
+  <preproc_include srow="0" scol="0" erow="1" ecol="0">
+    #include
+    <system_lib_string field="path" srow="0" scol="9" erow="0" ecol="19">&lt;iostream&gt;</system_lib_string>
+  </preproc_include>
+  <function_definition srow="2" scol="0" erow="5" ecol="1">
+    <primitive_type field="type" srow="2" scol="0" erow="2" ecol="3">int</primitive_type>
+    <function_declarator field="declarator" srow="2" scol="4" erow="2" ecol="10">
+      <identifier field="declarator" srow="2" scol="4" erow="2" ecol="8">main</identifier>
+      <parameter_list field="parameters" srow="2" scol="8" erow="2" ecol="10">
+        (
+        )
+      </parameter_list>
+    </function_declarator>
+    <compound_statement field="body" srow="2" scol="11" erow="5" ecol="1">
+      {
+      <expression_statement srow="3" scol="1" erow="3" ecol="72">
+        <binary_expression srow="3" scol="1" erow="3" ecol="71">
+          <binary_expression field="left" srow="3" scol="1" erow="3" ecol="58">
+            <binary_expression field="left" srow="3" scol="1" erow="3" ecol="22">
+              <qualified_identifier field="left" srow="3" scol="1" erow="3" ecol="10">
+                <namespace_identifier field="scope" srow="3" scol="1" erow="3" ecol="4">std</namespace_identifier>
+                ::
+                <identifier field="name" srow="3" scol="6" erow="3" ecol="10">cout</identifier>
+              </qualified_identifier>
+              &lt;&lt;
+              <string_literal field="right" srow="3" scol="14" erow="3" ecol="22">
+                "
+                <string_content srow="3" scol="15" erow="3" ecol="21">hello </string_content>
+                "
+              </string_literal>
+            </binary_expression>
+            &lt;&lt;
+            <call_expression field="right" srow="3" scol="26" erow="3" ecol="58">
+              <parenthesized_expression field="function" srow="3" scol="26" erow="3" ecol="56">
+                (
+                <lambda_expression srow="3" scol="27" erow="3" ecol="55">
+                  <lambda_capture_specifier field="captures" srow="3" scol="27" erow="3" ecol="29">
+                    [
+                    ]
+                  </lambda_capture_specifier>
+                  <abstract_function_declarator field="declarator" srow="3" scol="29" erow="3" ecol="35">
+                    <parameter_list field="parameters" srow="3" scol="29" erow="3" ecol="35">
+                      (
+                      <parameter_declaration srow="3" scol="30" erow="3" ecol="34">
+                        <primitive_type field="type" srow="3" scol="30" erow="3" ecol="34">void</primitive_type>
+                      </parameter_declaration>
+                      )
+                    </parameter_list>
+                  </abstract_function_declarator>
+                  <compound_statement field="body" srow="3" scol="35" erow="3" ecol="55">
+                    {
+                    <return_statement srow="3" scol="37" erow="3" ecol="53">
+                      return
+                      <string_literal srow="3" scol="44" erow="3" ecol="52">
+                        "
+                        <string_content srow="3" scol="45" erow="3" ecol="51">world!</string_content>
+                        "
+                      </string_literal>
+                      ;
+                    </return_statement>
+                    }
+                  </compound_statement>
+                </lambda_expression>
+                )
+              </parenthesized_expression>
+              <argument_list field="arguments" srow="3" scol="56" erow="3" ecol="58">
+                (
+                )
+              </argument_list>
+            </call_expression>
+          </binary_expression>
+          &lt;&lt;
+          <qualified_identifier field="right" srow="3" scol="62" erow="3" ecol="71">
+            <namespace_identifier field="scope" srow="3" scol="62" erow="3" ecol="65">std</namespace_identifier>
+            ::
+            <identifier field="name" srow="3" scol="67" erow="3" ecol="71">endl</identifier>
+          </qualified_identifier>
+        </binary_expression>
+        ;
+      </expression_statement>
+      <return_statement srow="4" scol="1" erow="4" ecol="10">
+        return
+        <number_literal srow="4" scol="8" erow="4" ecol="9">0</number_literal>
+        ;
+      </return_statement>
+      }
+    </compound_statement>
+  </function_definition>
+</translation_unit>

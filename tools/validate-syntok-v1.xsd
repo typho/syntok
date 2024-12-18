@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:syn="https://spec.typho.org/syntok/1.0/xml-schema"
+            targetNamespace="https://spec.typho.org/syntok/1.0/xml-schema"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+  <xsd:simpleType name="category">
+    <xsd:annotation>
+      <xsd:documentation>An identifier to categorize the tokens into a set of categories deemed useful by the lexer, hopefully for a wide range of usecases</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[_a-zA-Z][_a-zA-Z0-9-]*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="encoding">
+    <xsd:annotation>
+      <xsd:documentation>Admissible encoding types</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="hex"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="item" mixed="true">
+    <xsd:annotation>
+        <xsd:documentation>one token of the lexicalization of the file content</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="start" type="xsd:nonNegativeInteger" use="required"/>
+    <xsd:attribute name="end" type="xsd:nonNegativeInteger" use="required"/>
+    <xsd:attribute name="category" type="syn:category" use="required"/>
+    <xsd:attribute name="encoding" type="syn:encoding" use="optional"/>
+    <xsd:anyAttribute processContents="skip"/>
+  </xsd:complexType>
+
+  <xsd:element name="syntok">
+    <xsd:annotation>
+        <xsd:documentation>root element covering the file content</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+        <xsd:element name="item" type="syn:item"/>
+      </xsd:sequence>
+      <xsd:anyAttribute processContents="skip"/>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

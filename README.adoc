@@ -1,0 +1,65 @@
+README
+======
+
+author::
+  tajpulo
+version::
+  1.0.0
+
+What is it about?
+-----------------
+
+We need a specification which assigns categories to tokens in a file.
+
+* Consider a formal grammar (which involves strings) and given a document, you want to extract all occuring strings.
+* Consider a formal grammar and given a document, you want to syntax highlight occuring tokens.
+* Consider a formal grammar (specifying some program module) and given a document, you want to extract the public API defined within.
+
+In this case, it makes sense to partition the document (which was written in a formal grammar) into a sequence of tokens (identified by byte offsets) and assign categories to them. This process is actually very common in parsers (“tokenization”). `syntok` is a specification to serialize this data in a grammar-independent manner. That's it (and nothing more).
+
+The categorization (choice of categories) is *not* part of the specification (but the parser writer).
+Hierarchical structure are not represented in syntok files.
+
+Why should I use it?
+--------------------
+
+Because we want to interoperability between tools and syntok is a universal serialization format for this job.
+
+Who should use it?
+------------------
+
+Do you write a parser?:: Make sure to enable serialization of the parsed document into a `syntok` file.
+Do you want to process a source document?:: Let the grammar-specific tool generate syntok output and then process the syntok file. Be aware that syntok does not make it easy to extract all fancy grammar-specific details like document hierarchy. It targets syntax highlighting and synactically simple usecases.
+
+What does this repository contribute?
+-------------------------------------
+
+A syntok file is an XML file described in this document:
+
+* link:specification/syntok.v1.adoc[Syntok specification, 2024-12-18, version 1.0].
+
+… with the following (relevant) tools:
+
+* An link:tools/validate-syntok-v1.xsd[XSD file] to verify some properties of a syntok file
+* A link:tools/validate-syntok-v1.py[python script] to verify remaining properties of a syntok file
+* A link:tools/syntok-colorize-cli.py[python script] taking a syntok file to generate colorized CLI output (TODO)
+* A link:tools/syntok-colorize-web.html[JavaScript-powered webpage] taking a syntok file to generate colorized output on an HTML page (TODO)
+* A link:tools/generate-syntok-file-by-unicode-categories.py[python script] to generate syntok template by Unicode categories
+* A link:tools/tree-sitter-to-syntok.py[python script] taking a tree-sitter dump and the original file to generate the syntok file
+
+License
+-------
+
+See link:LICENSE[the LICENSE file] (Hint: MIT license).
+
+Changelog
+---------
+
+1.0.0::
+  first release, no further releases intended
+
+Issues
+------
+
+Please report any issues on the link:https://github.com/typho/syntok/issues[Github issues page].
+

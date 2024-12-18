@@ -1,0 +1,35 @@
+syntok specification
+====================
+
+author::
+  tajpulo
+version::
+  1.0.0
+
+Capitalized modal verbs like MUST or MAY have to be interpreted according to [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119) and errata [RFC 8174](https://www.rfc-editor.org/rfc/rfc8174).
+
+Basic structure
+---------------
+
+A syntok file MUST be an XML 1.0 or XML 1.1 document.
+Syntok files SHOULD use the file extension `.synt`.
+The file MUST obey the following structure:
+
+* The XML document uses the namespace `https://spec.typho.org/syntok/1.0/xml-schema`
+* A root element `syntok` MAY contain `item` elements. Text nodes containing only whitespace are ignored. Other text nodes are disallowed.
+* Every `item` element
+** has a `category` attribute naming its associated category
+** has a `start` and `end` attribute specifying the first and last byte offsets respectively covering this item
+** has an optional attribute `encoding`
+** has only one child node, namely a text node with the corresponding part of the source document
+
+Detailed specification
+----------------------
+
+In more detail, a syntok file MUST satisfy the following properties:
+
+* The XML document's encoding SHOULD be set to the encoding of the source document. If the source document does not have a text encoding (e.g. binary files), the encoding SHOULD be `utf-8`.
+* A category name MUST satisfy the following regular expression: `[_a-zA-Z][_a-zA-Z0-9-]*`footnote:[this is a subset of the CSS class syntax since it may not start with U+002D HYPHEN-MINUS]
+* Considering `start` and `end` attributes as integer range (both values are inclusive non-negative end points), the set of ranges MUST cover all bytes of the source document and no two ranges overlap (“partition property”). `end` MUST be greater or equal to `start`. The first item must have `start` be set to zero and the current `item` element's `end` attribute plus one MUST equal the next `item` element's `start` attribute.
+* An attribute `encoding` MAY only be set to `hex` if the item's text node cannot be represented in the source document's text encoding or it does not have one. If so, the element contains exactly one text node with the uppercase hexadecimal representation of each byte in ASCII (e.g. `41` for U+0041 LATIN CAPITAL LETTER A).
+* `syntok` and `item` elements MAY have additional attributes containing metadata.

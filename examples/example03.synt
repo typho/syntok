@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<syntok>
+  <item category="xmldecl"      start="0"    end="20"   >&lt;?xml version="1.0"?&gt;</item>
+  <item category="newline"      start="21"   end="21"  >
+</item>
+  <item category="operator"     start="22"   end="22"  >&lt;</item>
+  <item category="ns"           start="23"   end="25"  >rdf</item>
+  <item category="operator"     start="26"   end="26"  >:</item>
+  <item category="element"      start="27"   end="29"  >RDF</item>
+  <item category="whitespace"   start="30"   end="30"  > </item>
+  <item category="ns"           start="31"   end="35"  >xmlns</item>
+  <item category="operator"     start="36"   end="36"  >:</item>
+  <item category="name"         start="37"   end="39"  >rdf</item>
+  <item category="operator"     start="40"   end="40"  >=</item>
+  <item category="attribute"    start="41"   end="85"  >"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</item>
+  <item category="newline"      start="86"   end="86"  >
+</item>
+  <item category="whitespace"   start="87"   end="98"  >            </item>
+  <item category="ns"           start="99"   end="103" >xmlns</item>
+  <item category="operator"     start="104"  end="104" >:</item>
+  <item category="name"         start="105"  end="106" >dc</item>
+  <item category="operator"     start="107"  end="107" >=</item>
+  <item category="attribute"    start="108"  end="141" >"http://purl.org/dc/elements/1.1/"</item>
+  <item category="newline"      start="142"  end="142" >
+</item>
+  <item category="whitespace"   start="143"  end="154" >            </item>
+  <item category="ns"           start="155"  end="159" >xmlns</item>
+  <item category="operator"     start="160"  end="160" >:</item>
+  <item category="name"         start="161"  end="162" >ex</item>
+  <item category="operator"     start="163"  end="163" >=</item>
+  <item category="attribute"    start="164"  end="194" >"http://example.org/stuff/1.0/"</item>
+  <item category="operator"     start="195"  end="195" >&gt;</item>
+  <item category="newline"      start="196"  end="197" >
+
+</item>
+  <item category="whitespace"   start="198"  end="199" >  </item>
+  <item category="operator"     start="200"  end="200" >&lt;</item>
+  <item category="ns"           start="201"  end="203" >rdf</item>
+  <item category="operator"     start="204"  end="204" >:</item>
+  <item category="element"      start="205"  end="215" >Description</item>
+  <item category="whitespace"   start="216"  end="216" > </item>
+  <item category="ns"           start="217"  end="219" >rdf</item>
+  <item category="operator"     start="220"  end="220" >:</item>
+  <item category="name"         start="221"  end="225" >about</item>
+  <item category="operator"     start="226"  end="226" >=</item>
+  <item category="attribute"    start="227"  end="267" >"http://www.w3.org/TR/rdf-syntax-grammar"</item>
+  <item category="newline"      start="268"  end="268" >
+</item>
+  <item category="whitespace"   start="269"  end="281" >             </item>
+  <item category="ns"           start="282"  end="283" >dc</item>
+  <item category="operator"     start="284"  end="284" >:</item>
+  <item category="name"         start="285"  end="289" >title</item>
+  <item category="operator"     start="290"  end="290" >=</item>
+  <item category="attribute"    start="291"  end="309" >"RDF1.1 XML Syntax"</item>
+  <item category="operator"     start="310"  end="310" >&gt;</item>
+  <item category="newline"      start="311"  end="311" >
+</item>
+  <item category="whitespace"   start="312"  end="315" >    </item>
+  <item category="operator"     start="316"  end="316" >&lt;</item>
+  <item category="ns"           start="317"  end="318" >ex</item>
+  <item category="operator"     start="319"  end="319" >:</item>
+  <item category="element"      start="320"  end="325" >editor</item>
+  <item category="operator"     start="326"  end="326" >&gt;</item>
+  <item category="newline"      start="327"  end="327" >
+</item>
+  <item category="whitespace"   start="328"  end="333" >      </item>
+  <item category="operator"     start="334"  end="334" >&lt;</item>
+  <item category="ns"           start="335"  end="337" >rdf</item>
+  <item category="operator"     start="338"  end="338" >:</item>
+  <item category="element"      start="339"  end="349" >Description</item>
+  <item category="whitespace"   start="350"  end="350" > </item>
+  <item category="ns"           start="351"  end="352" >ex</item>
+  <item category="operator"     start="353"  end="353" >:</item>
+  <item category="name"         start="354"  end="361" >fullName</item>
+  <item category="operator"     start="362"  end="362" >=</item>
+  <item category="attribute"    start="363"  end="376" >"Dave Beckett"</item>
+  <item category="operator"     start="377"  end="377" >&gt;</item>
+  <item category="newline"      start="378"  end="378" >
+</item>
+  <item category="whitespace"   start="379"  end="386" >        </item>
+  <item category="operator"     start="387"  end="387" >&lt;</item>
+  <item category="ns"           start="388"  end="389" >ex</item>
+  <item category="operator"     start="390"  end="390" >:</item>
+  <item category="element"      start="391"  end="398" >homePage</item>
+  <item category="whitespace"   start="399"  end="399" > </item>
+  <item category="ns"           start="400"  end="402" >rdf</item>
+  <item category="operator"     start="403"  end="403" >:</item>
+  <item category="name"         start="404"  end="411" >resource</item>
+  <item category="operator"     start="412"  end="412" >=</item>
+  <item category="attribute"    start="413"  end="441" >"http://purl.org/net/dajobe/"</item>
+  <item category="whitespace"   start="442"  end="442" > </item>
+  <item category="operator"     start="443"  end="444" >/&gt;</item>
+  <item category="newline"      start="445"  end="445" >
+</item>
+  <item category="whitespace"   start="446"  end="451" >      </item>
+  <item category="operator"     start="452"  end="453" >&lt;/</item>
+  <item category="ns"           start="454"  end="456" >rdf</item>
+  <item category="operator"     start="457"  end="457" >:</item>
+  <item category="element"      start="458"  end="468" >Description</item>
+  <item category="operator"     start="469"  end="469" >&gt;</item>
+  <item category="newline"      start="470"  end="470" >
+</item>
+  <item category="whitespace"   start="471"  end="474" >    </item>
+  <item category="operator"     start="475"  end="476" >&lt;/</item>
+  <item category="ns"           start="477"  end="478" >ex</item>
+  <item category="operator"     start="479"  end="479" >:</item>
+  <item category="element"      start="480"  end="485" >editor</item>
+  <item category="operator"     start="486"  end="486" >&gt;</item>
+  <item category="newline"      start="487"  end="487" >
+</item>
+  <item category="whitespace"   start="488"  end="489" >  </item>
+  <item category="operator"     start="490"  end="491" >&lt;/</item>
+  <item category="ns"           start="492"  end="494" >rdf</item>
+  <item category="operator"     start="495"  end="495" >:</item>
+  <item category="element"      start="496"  end="506" >Description</item>
+  <item category="operator"     start="507"  end="507" >&gt;</item>
+  <item category="newline"      start="508"  end="509" >
+
+</item>
+  <item category="operator"     start="510"  end="511" >&lt;/</item>
+  <item category="ns"           start="512"  end="514" >rdf</item>
+  <item category="operator"     start="515"  end="515" >:</item>
+  <item category="element"      start="516"  end="518" >RDF</item>
+  <item category="operator"     start="519"  end="519" >&gt;</item>
+  <item category="newline"      start="520"  end="520" >
+</item>
+</syntok>

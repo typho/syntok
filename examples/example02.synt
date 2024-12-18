@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<syntok>
+  <!-- category names were taken over from pygments: pygmentize -f html example02.lua -->
+  <!-- category 'ws' was introduced manually -->
+  <item category="kd" start="0" end="4">local</item>
+  <item category="ws" start="5" end="5"> </item>
+  <item category="n"  start="6" end="7">io</item>
+  <item category="ws" start="8" end="8"> </item>
+  <item category="o"  start="9" end="9">=</item>
+  <item category="ws" start="10" end="10"> </item>
+  <item category="nb" start="11" end="17">require</item>
+  <item category="s1" start="18" end="21">&#39;io&#39;</item>
+  <item category="p"  start="22" end="22">;</item>
+  <item category="ws" start="23" end="23">
+</item>
+  <item category="nb" start="24" end="31">io.write</item>
+  <item category="p"  start="32" end="32">(</item>
+  <item category="s2" start="33" end="43">&quot;sin(3) = &quot;</item>
+  <item category="p"  start="44" end="44">,</item>
+  <item category="ws" start="45" end="45"> </item>
+  <item category="nb" start="46" end="53">math.sin</item>
+  <item category="p"  start="54" end="54">(</item>
+  <item category="mi" start="55" end="55">3</item>
+  <item category="p"  start="56" end="57">),</item>
+  <item category="ws" start="58" end="58"> </item>
+  <item category="s2" start="59" end="59">&quot;</item>
+  <item category="se" start="60" end="61">\n</item>
+  <item category="s2" start="62" end="62">&quot;</item>
+  <item category="p"  start="63" end="63">)</item>
+</syntok>
