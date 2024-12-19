@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<syntok>
+<syntok xmlns="https://spec.typho.org/syntok/1.0/xml-schema">
   <!-- category names were taken over from pygments: pygmentize -f html example02.lua -->
   <!-- category 'ws' was introduced manually -->
   <item category="kd" start="0" end="4">local</item>

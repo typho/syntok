@@ -39,6 +39,8 @@ class XMLSAXReader(xml.sax.handler.ContentHandler):
             raise ValueError("Only root element /syntok and subelement /syntok/item are allowed; got '{}' in /{}".format(name, '/'.join(self.element_path)))
 
         if name == 'syntok':
+            if attributes['xmlns'] != NAMESPACE:
+                raise ValueError("Default namespace (xmlns) must be set to '{}' at the syntok element".format(NAMESPACE))
             self.verifySyntokElement(attributes)
         elif name == 'item':
             self.verifyItemElement(attributes)
